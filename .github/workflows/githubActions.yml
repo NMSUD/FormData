@@ -10,6 +10,7 @@ on:
 
 jobs:
   build:
+    environment: github-pages
     runs-on: ubuntu-latest
 
     strategy:
@@ -34,22 +35,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
           cache-dependency-path: nmsud-form/package-lock.json
-
-      - name: Setup Secrets
-        env:
-          NMSUD_IMG_BASE_URL: ${{ secrets.NMSUD_IMG_BASE_URL }}
-        run: |
-          cd nmsud-form
-          touch .env
-          echo XATA_API_KEY="test" >> .env
-          echo XATA_DB_URL="tester" >> .env
-          echo XATA_FALLBACK_BRANCH="testetete" >> .env
-          echo NMSUD_IMG_BASE_URL="$NMSUD_IMG_BASE_URL" >> .env
-
-      - name: "DEBUG: show env"
-        run: |
-          cd nmsud-form
-          cat .env
 
       - name: Setup Secrets
         env:
