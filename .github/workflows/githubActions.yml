@@ -19,9 +19,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: "DEBUG: list current repo files"
-        run: |
-          ls -lah
 
       - uses: actions/checkout@v4
         with:
@@ -50,11 +47,6 @@ jobs:
           echo XATA_FALLBACK_BRANCH="$XATA_FALLBACK_BRANCH" >> .env
           echo NMSUD_IMG_BASE_URL="$NMSUD_IMG_BASE_URL" >> .env
 
-      - name: "DEBUG: list pull data repo"
-        run: |
-          cd nmsud-form
-          ls -lah
-
       - name: Pull data from Form Submissions
         run: |
           cd nmsud-form
@@ -66,6 +58,11 @@ jobs:
         run: |
           echo "" > .gitignore
           npm run build
+
+      - name: Add .nojekyll
+        run: |
+          cd data
+          touch .nojekyll
 
       - uses: JamesIves/github-pages-deploy-action@v4
         name: Deploy to GitHub Pages
