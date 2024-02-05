@@ -42,14 +42,16 @@ async function generateHtmlForFolder(folder, breadcrumbs) {
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 	<style>
-		h3 li a,
-		ul li a {
-			text-decoration: none;
-            color: lightblue;
-		}
 		body {
 			background: #1c222f;
 			color: #FFFFFF;
+			font-family: Roboto;
+			margin: 0 2em;
+		}
+		h3 a,
+		ul li a {
+			text-decoration: none;
+            color: lightblue;
 		}
 	</style>
 </head>
