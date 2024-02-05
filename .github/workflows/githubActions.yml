@@ -1,0 +1,71 @@
+name: NodeJS with Webpack
+
+permissions:
+  contents: write
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: "DEBUG: list current repo files"
+        run: |
+          ls -lah
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+
+      - uses: actions/checkout@v4
+        with:
+          repository: "git@github.com:NMSUD/Form.git"
+          path: nmsud-form
+
+      - name: Setup Secrets
+        env:
+          XATA_API_KEY: ${{ secrets.XATA_API_KEY }}
+          XATA_DB_URL: ${{ secrets.XATA_DB_URL }}
+          XATA_FALLBACK_BRANCH: ${{ secrets.XATA_FALLBACK_BRANCH }}
+          NMSUD_IMG_BASE_URL: ${{ secrets.NMSUD_IMG_BASE_URL }}
+        run: |
+          cd nmsud-form
+          touch .env
+          echo XATA_API_KEY="$XATA_API_KEY" >> .env
+          echo XATA_DB_URL="$XATA_DB_URL" >> .env
+          echo XATA_FALLBACK_BRANCH="$XATA_FALLBACK_BRANCH" >> .env
+          echo NMSUD_IMG_BASE_URL="$NMSUD_IMG_BASE_URL" >> .env
+
+      - name: "DEBUG: list pull data repo"
+        run: |
+          cd nmsud-form
+          ls -lah
+
+      - name: Pull data from Form Submissions
+        run: |
+          cd nmsud-form
+          npm ci
+          npm run data:downloader
+          cp -r data ../data
+
+      - name: Build Index.html
+        run: |
+          echo "" > .gitignore
+          npm run build
+
+      - uses: JamesIves/github-pages-deploy-action@v4
+        name: Deploy to GitHub Pages
+        if: github.event_name != 'pull_request'
+        with:
+          folder: data
