@@ -37,6 +37,22 @@ jobs:
 
       - name: Setup Secrets
         env:
+          NMSUD_IMG_BASE_URL: ${{ secrets.NMSUD_IMG_BASE_URL }}
+        run: |
+          cd nmsud-form
+          touch .env
+          echo XATA_API_KEY="test" >> .env
+          echo XATA_DB_URL="tester" >> .env
+          echo XATA_FALLBACK_BRANCH="testetete" >> .env
+          echo NMSUD_IMG_BASE_URL="$NMSUD_IMG_BASE_URL" >> .env
+
+      - name: "DEBUG: show env"
+        run: |
+          cd nmsud-form
+          cat .env
+
+      - name: Setup Secrets
+        env:
           XATA_API_KEY: ${{ secrets.XATA_API_KEY }}
           XATA_DB_URL: ${{ secrets.XATA_DB_URL }}
           XATA_FALLBACK_BRANCH: ${{ secrets.XATA_FALLBACK_BRANCH }}
