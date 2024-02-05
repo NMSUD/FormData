@@ -26,6 +26,7 @@ jobs:
         with:
           repository: "git@github.com:NMSUD/Form.git"
           path: nmsud-form
+          path: main
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
