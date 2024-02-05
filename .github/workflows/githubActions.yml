@@ -22,16 +22,17 @@ jobs:
         run: |
           ls -lah
 
+      - uses: actions/checkout@v4
+        with:
+          repository: "git@github.com:NMSUD/Form.git"
+          path: nmsud-form
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-
-      - uses: actions/checkout@v4
-        with:
-          repository: "git@github.com:NMSUD/Form.git"
-          path: nmsud-form
+          cache-dependency-path: nmsud-form/package-lock.json
 
       - name: Setup Secrets
         env:
