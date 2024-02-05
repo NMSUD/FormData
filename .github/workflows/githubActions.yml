@@ -69,3 +69,4 @@ jobs:
         if: github.event_name != 'pull_request'
         with:
           folder: data
+          clean: false
