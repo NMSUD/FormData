@@ -18,9 +18,9 @@ async function generateHtmlForFolder(folder, breadcrumbs) {
 		if (dirent.isDirectory()) {
 			fileLists.push(getLink(0, dirent.name));
 			await generateHtmlForFolder(
-				`./${folder}/${dirent.name}`, 
-				[...breadcrumbs, `<a href="/${folder}">${dirent.name}</a>`]
-				);
+				`./${folder}/${dirent.name}`,
+				[...breadcrumbs, `<a href="/${dirent.name}">${dirent.name}</a>`]
+			);
 			continue;
 		}
 
