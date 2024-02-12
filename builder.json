@@ -1,57 +1,28 @@
 [
   {
-    "id": "rec_cn4v0pjlm5fdrcitrnug",
+    "id": "rec_cn54ca4vdvpinuvju5b0",
     "communityAffiliations": [
       {
-        "id": "rec_cn1mhk17rhpll39cq3ng",
-        "name": "TestDropdown"
+        "id": "rec_cn549q2beinr95oc7vdg",
+        "name": "Eisvana"
       }
     ],
-    "name": "Kurt",
-    "profilePicUrl": "https://nmsud-data.nmsassistant.com/img/builder/rec_cn4v0pjlm5fdrcitrnug_profile_pic.png",
-    "bio": "Tetseretest",
+    "name": "Bob",
+    "profilePicUrl": "https://nmsud-data.nmsassistant.com/img/builder/rec_cn54ca4vdvpinuvju5b0_profile_pic.png",
+    "bio": "Tester",
     "platforms": [
       2
     ],
-    "startedPlaying": "2017-01-04T11:00:00.000Z",
+    "startedPlaying": "2018-02-12T11:00:00.000Z",
     "buildTechniquesUsed": [
       "Survival",
       "Creative"
     ],
-    "labels": [],
-    "socials": [
-      "http://ss.ss"
-    ],
-    "contactDetails": "testetetet estestestes"
-  },
-  {
-    "id": "rec_cn50lo3lm5fdrcitrpc0",
-    "communityAffiliations": [
-      {
-        "id": "rec_cn1mhk17rhpll39cq3ng",
-        "name": "TestDropdown"
-      },
-      {
-        "id": "rec_cmufiu8ttkpuerrj4c6g",
-        "name": "Kurt"
-      }
-    ],
-    "name": "TestWithCommunity",
-    "profilePicUrl": "https://nmsud-data.nmsassistant.com/img/builder/rec_cn50lo3lm5fdrcitrpc0_profile_pic.png",
-    "bio": "Tester",
-    "platforms": [
-      0,
-      1
-    ],
-    "startedPlaying": "2024-02-12T11:00:00.000Z",
-    "buildTechniquesUsed": [
-      "Survival",
-      "Blender"
-    ],
     "labels": [
-      "Tester"
+      "Tester",
+      " test"
     ],
     "socials": [],
-    "contactDetails": "rerere"
+    "contactDetails": "bob"
   }
 ]

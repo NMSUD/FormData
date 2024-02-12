@@ -1,32 +1,17 @@
 [
   {
-    "id": "rec_cmufiu8ttkpuerrj4c6g",
-    "name": "Kurt",
-    "profilePicUrl": "https://nmsud-data.nmsassistant.com/img/community/rec_cmufiu8ttkpuerrj4c6g_profile_pic.png",
-    "bio": "Tester",
+    "id": "rec_cn549q2beinr95oc7vdg",
+    "name": "Eisvana",
+    "profilePicUrl": "https://nmsud-data.nmsassistant.com/img/community/rec_cn549q2beinr95oc7vdg_profile_pic.png",
+    "bio": "Eisvana is a civilization, a player-created community in the game No Man's Sky.\n\nThe tools hosted here are specifically geared towards Eisvana, but can be forked and adjusted to fit other civs as well.",
     "bioMediaUrls": [],
     "homeGalaxies": [],
     "tags": [
       "Civilization"
     ],
     "socials": [
-      "http://assistantapps.com"
+      "https://eisvana.github.io"
     ],
-    "contactDetails": "KhaozTopsy#1000"
-  },
-  {
-    "id": "rec_cn1mhk17rhpll39cq3ng",
-    "name": "TestDropdown",
-    "profilePicUrl": "https://nmsud-data.nmsassistant.com/img/community/rec_cn1mhk17rhpll39cq3ng_profile_pic.png",
-    "bio": "drop",
-    "bioMediaUrls": [],
-    "homeGalaxies": [],
-    "tags": [
-      "Civilization"
-    ],
-    "socials": [
-      "https://reddit.com"
-    ],
-    "contactDetails": "down"
+    "contactDetails": "Lenni"
   }
 ]
