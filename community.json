@@ -1,42 +1,32 @@
 [
   {
     "id": "rec_cmufiu8ttkpuerrj4c6g",
-    "bio": "Tester",
-    "bioMediaUrls": "",
-    "contactDetails": "KhaozTopsy#1000",
     "name": "Kurt",
     "profilePicUrl": "https://nmsud-data.nmsassistant.com/img/community/rec_cmufiu8ttkpuerrj4c6g_profile_pic.png",
-    "socials": "http://assistantapps.com",
-    "tags": "Civilization"
-  },
-  {
-    "id": "rec_cmufiu8ttkpuerrj4c6g",
     "bio": "Tester",
-    "bioMediaUrls": "",
-    "contactDetails": "KhaozTopsy#1000",
-    "name": "Kurt",
-    "profilePicUrl": "https://nmsud-data.nmsassistant.com/img/community/rec_cmufiu8ttkpuerrj4c6g_profile_pic.png",
-    "socials": "http://assistantapps.com",
-    "tags": "Civilization"
+    "bioMediaUrls": [],
+    "homeGalaxies": [],
+    "tags": [
+      "Civilization"
+    ],
+    "socials": [
+      "http://assistantapps.com"
+    ],
+    "contactDetails": "KhaozTopsy#1000"
   },
   {
     "id": "rec_cn1mhk17rhpll39cq3ng",
-    "bio": "drop",
-    "bioMediaUrls": "",
-    "contactDetails": "down",
     "name": "TestDropdown",
     "profilePicUrl": "https://nmsud-data.nmsassistant.com/img/community/rec_cn1mhk17rhpll39cq3ng_profile_pic.png",
-    "socials": "https://reddit.com",
-    "tags": "Civilization"
-  },
-  {
-    "id": "rec_cn1mhk17rhpll39cq3ng",
     "bio": "drop",
-    "bioMediaUrls": "",
-    "contactDetails": "down",
-    "name": "TestDropdown",
-    "profilePicUrl": "https://nmsud-data.nmsassistant.com/img/community/rec_cn1mhk17rhpll39cq3ng_profile_pic.png",
-    "socials": "https://reddit.com",
-    "tags": "Civilization"
+    "bioMediaUrls": [],
+    "homeGalaxies": [],
+    "tags": [
+      "Civilization"
+    ],
+    "socials": [
+      "https://reddit.com"
+    ],
+    "contactDetails": "down"
   }
 ]
