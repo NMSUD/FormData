@@ -1,5 +1,7 @@
 const fs = require('fs');
 const util = require('util');
+const packageJson = require("./package.json");
+const formPackageJson = require("./nmsud-form/package.json");
 
 const copyFile = util.promisify(fs.copyFile);
 
@@ -53,6 +55,10 @@ async function generateHtmlForFolder(folder, breadcrumbs) {
 			text-decoration: none;
             color: lightblue;
 		}
+		footer {
+			position: absolute;
+			bottom: 1em;
+		}
 	</style>
 </head>
 <body>
@@ -66,6 +72,13 @@ async function generateHtmlForFolder(folder, breadcrumbs) {
 	${fileLists.join('\n\t')}
 	</ul>
 
+	<footer>
+		<span>Data browser v${packageJson.version}</span>
+		<span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+		<span>Form version: v${formPackageJson.version}</span>
+		<span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+		<span>Generated on ${(new Date()).toDateString()}</span>
+	</footer>
 </body>
 </html>
 	`;
