@@ -1,15 +1,28 @@
 const fs = require('fs');
 const util = require('util');
 const packageJson = require("./package.json");
-const formPackageJson = require("./nmsud-form/package.json");
 
 const copyFile = util.promisify(fs.copyFile);
 
 const exportFolder = 'data';
+const isGithubActions = process.env.GITHUB_ACTIONS != null;
+let formPackageVersion = '0.0.0';
 
 async function generateHtml() {
+	if (isGithubActions) {
+		const formPackageJson = require("./nmsud-form/package.json");
+		formPackageVersion = formPackageJson.version;
+	}
+
 	await copyFile('./CNAME', `./${exportFolder}/CNAME`);
 	await generateHtmlForFolder(`./${exportFolder}`, [`<a href="/">🏠 Home</a>`]);
+}
+
+function getLink(type, name) {
+	let emoji = '❓';
+	if (type == 0) emoji = '📁';
+	if (type == 1) emoji = '📄';
+	return `<li data-sort="${type}-${name.toLowerCase()}"><a href="./${name}">${emoji}&nbsp;${name}</a></li>`;
 }
 
 async function generateHtmlForFolder(folder, breadcrumbs) {
@@ -75,7 +88,7 @@ async function generateHtmlForFolder(folder, breadcrumbs) {
 	<footer>
 		<span>Data browser v${packageJson.version}</span>
 		<span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-		<span>Form version: v${formPackageJson.version}</span>
+		<span>Form version: v${formPackageVersion}</span>
 		<span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
 		<span>Generated on ${(new Date()).toDateString()}</span>
 	</footer>
@@ -83,13 +96,6 @@ async function generateHtmlForFolder(folder, breadcrumbs) {
 </html>
 	`;
 	fs.writeFile(`${folder}/index.html`, htmlString, ['utf8'], () => { });
-}
-
-function getLink(type, name) {
-	let emoji = '❓';
-	if (type == 0) emoji = '📁';
-	if (type == 1) emoji = '📄';
-	return `<li data-sort="${type}-${name.toLowerCase()}"><a href="./${name}">${emoji}&nbsp;${name}</a></li>`;
 }
 
 generateHtml();

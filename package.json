@@ -1,6 +1,6 @@
 {
   "name": "nmsud-form-data",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A place to host the data from form submissions.",
   "homepage": "https://nmsud-data.nmsassistant.com",
   "main": "buildIndex.js",
