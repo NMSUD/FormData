@@ -2,10 +2,11 @@
   {
     "id": "rec_cn549q2beinr95oc7vdg",
     "name": "Eisvana",
-    "profilePicUrl": "https://nmsud-data.nmsassistant.com/img/community/rec_cn549q2beinr95oc7vdg_profile_pic.png",
+    "profilePicUrl": "/img/community/rec_cn549q2beinr95oc7vdg_profile_pic.png",
     "bio": "Eisvana is a civilization, a player-created community in the game No Man's Sky.\n\nThe tools hosted here are specifically geared towards Eisvana, but can be forked and adjusted to fit other civs as well.",
     "bioMediaUrls": [],
-    "homeGalaxies": [],
+    "homeGalaxy": "",
+    "coordinates": "",
     "tags": [
       "Civilization"
     ],
