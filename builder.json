@@ -1,28 +1,29 @@
 [
   {
     "id": "rec_cn54ca4vdvpinuvju5b0",
-    "communityAffiliations": [
-      {
-        "id": "rec_cn549q2beinr95oc7vdg",
-        "name": "Eisvana"
-      }
-    ],
-    "name": "Bob",
-    "profilePicUrl": "/img/builder/rec_cn54ca4vdvpinuvju5b0_profile_pic.png",
+    "anonymousUserGuid": "",
     "bio": "Tester",
-    "platforms": [
-      2
-    ],
-    "startedPlaying": "2018-02-12T11:00:00.000Z",
     "buildTechniquesUsed": [
       "Survival",
       "Creative"
     ],
+    "contactDetails": "bob",
     "labels": [
       "Tester",
       " test"
     ],
+    "name": "Bob",
+    "platforms": [
+      2
+    ],
+    "profilePicUrl": "/img/builder/rec_cn54ca4vdvpinuvju5b0_profile_pic.png",
     "socials": [],
-    "contactDetails": "bob"
+    "startedPlaying": "2018-02-12T11:00:00.000Z",
+    "communityAffiliations": [
+      {}
+    ],
+    "meta": {
+      "numberOfBuilds": 0
+    }
   }
 ]
