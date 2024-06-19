@@ -1,7 +1,7 @@
 <div align="center">
   
   # NMSUD FormData
-  _All the data from your submittions on the [Unification Days form][nmsudForm] easier._
+  _All the data from your submissions on the [Unification Days form][nmsudForm] easier._
   
   <br />  
   
